@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 /books
 temp.py
 /__pycache__
+=======
+venv/
+__pycache__/
+>>>>>>> f9119f0 (set up asteroids project)

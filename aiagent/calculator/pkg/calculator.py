@@ -1,5 +1,3 @@
-# calculator.py
-
 class Calculator:
     def __init__(self):
         self.operators = {
@@ -59,3 +57,15 @@ class Calculator:
         b = values.pop()
         a = values.pop()
         values.append(self.operators[operator](a, b))
+
+    def test_expression(self):
+        expression = "3 + 7 * 2"
+        result = self.evaluate(expression)
+        print(f"Result: {result}")
+        assert result == 17, f"Expected 17, but got {result}"
+        return "Test passed"
+
+
+if __name__ == '__main__':
+    calculator = Calculator()
+    print(calculator.test_expression())

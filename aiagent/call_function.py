@@ -5,6 +5,8 @@ from functions.get_file_content import schema_get_file_content, get_file_content
 from functions.run_python_file import schema_run_python_file, run_python_file
 from functions.write_file import schema_write_file, write_file
 
+from config import WORKING_DIR
+
 available_functions = types.Tool(
     function_declarations=[
         schema_get_files_info,
@@ -23,7 +25,7 @@ def call_function(function_call_part, verbose=False): #function_call_part is a t
         print(f" - Calling function: {function_call_part.name}")
 
 
-    function_call_part.args["working_directory"] = "./calculator"
+    function_call_part.args["working_directory"] = WORKING_DIR
 
 
     if function_call_part.name == "get_files_info":

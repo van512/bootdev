@@ -1,15 +1,22 @@
 # from subdirectory.filename import function_name
 #from functions.get_files_info import get_files_info
 #from functions.get_file_content import get_file_content
-from functions.write_file import write_file
+#from functions.write_file import write_file
+from functions.run_python_file import run_python_file
 
 #"""
 #my tests
 def test():
+    # run_python_file tests
+    print(run_python_file("calculator", "main.py"))
+    print(run_python_file("calculator", "tests.py"))
+    print(run_python_file("calculator", "../main.py"))
+    print(run_python_file("calculator", "nonexistent.py"))
+
     #write_file tests
-    print(write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum"))
-    print(write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"))
-    print(write_file("calculator", "/tmp/temp.txt", "this should not be allowed"))
+    #print(write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum"))
+    #print(write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"))
+    #print(write_file("calculator", "/tmp/temp.txt", "this should not be allowed"))
 
     # get_file_content tests
     #print(get_file_content("calculator", "lorem.txt"))
